@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELEVN - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- SECTION 1: HERO / HEADER -->
+    <header class="section-1-hero">
+        <nav class="navbar">
+            <a href="index.html" class="logo">ELEVN</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">HOME</a></li>
+                <li><a href="shop.html">SHOP</a></li>
+                <li><a href="collection.html">COLLECTION</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+            <div class="nav-icons">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+            </div>
+        </nav>
+
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>CREATE A<br>FASHION<br>VIBE</h1>
+                <p>Minimal fashion designed for<br>everyday confidence</p>
+                <div class="hero-buttons">
+                    <a href="shop.html" class="btn btn-dark">SHOP NOW</a>
+                    <a href="collection.html" class="btn btn-light">EXPLORE COLLECTION</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="image/fashion.jpg" alt="Fashion Model">
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 2: CATEGORIES -->
+    <section class="section-2-categories">
+        <div class="category-grid">
+            <a href="shop.html" class="category-card">
+                <img src="images/category-1.jpg" alt="Men's Fashion">
+                <div class="card-overlay"><h3>MEN'S<br>SHOP NOW</h3></div>
+            </a>
+            <a href="shop.html" class="category-card">
+                <img src="images/category-2.jpg" alt="Women's Fashion">
+                <div class="card-overlay"><h3>WOMEN'S<br>SHOP NOW</h3></div>
+            </a>
+            <a href="shop.html" class="category-card">
+                <img src="images/category-3.jpg" alt="Jackets">
+                <div class="card-overlay"><h3>JACKETS<br>SHOP NOW</h3></div>
+            </a>
+            <a href="shop.html" class="category-card">
+                <img src="images/category-4.jpg" alt="Men's Style">
+                <div class="card-overlay"><h3>MEN'S<br>SHOP NOW</h3></div>
+            </a>
+        </div>
+    </section>
+
+    <!-- SECTION 3: NEW ARRIVALS -->
+    <section class="section-3-arrivals">
+        <div class="section-header">
+            <h2>NEW ARRIVALS</h2>
+            <p>Timeless pieces crafted with premium fabrics</p>
+        </div>
+        <div class="product-grid">
+            <div class="product-card"><img src="image/product-1.jpg" alt="Product 1"></div>
+            <div class="product-card"><img src="image/product-2.jpg" alt="Product 2"></div>
+            <div class="product-card"><img src="image/product-3.jpg" alt="Product 3"></div>
+            <div class="product-card"><img src="image/product-4.jpg" alt="Product 4"></div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: SEASONAL PROMO -->
+    <section class="section-4-seasonal">
+        <div class="seasonal-text">
+            <h2>DESIGNED FOR<br>EVERY SEASON</h2>
+            <p>Comfort meets modern aesthetic</p>
+            <a href="collection.html" class="btn btn-light">EXPLORE COLLECTION</a>
+        </div>
+        <div class="seasonal-image">
+            <img src="images/seasonal-model.jpg" alt="Seasonal Fashion">
+        </div>
+    </section>
+
+    <!-- SECTION 5: FOOTER -->
+    <footer class="section-5-footer">
+        <div class="newsletter">
+            <h3>JOIN OUR NEWSLETTER</h3>
+            <p>Get updates on arrivals and exclusive offers</p>
+            <form class="newsletter-form" id="newsletterForm">
+                <input type="email" id="emailInput" placeholder="Enter your email" required>
+                <button type="submit">SUBSCRIBE</button>
+            </form>
+            <p id="formMessage" class="form-message"></p>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 ELEVN. All Rights Reserved</p>
+            <div class="footer-links">
+                <a href="#">PRIVACY POLICY</a>
+                <a href="#">TERMS & CONDITIONS</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const newsletterForm = document.getElementById('newsletterForm');
+        const emailInput = document.getElementById('emailInput');
+        const formMessage = document.getElementById('formMessage');
+
+        newsletterForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const email = emailInput.value.trim();
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!emailPattern.test(email)) {
+                formMessage.textContent = '❌ Please enter a valid email address.';
+                formMessage.style.color = '#d32f2f';
+                return;
+            }
+            formMessage.textContent = '✅ Thanks for subscribing, ' + email + '!';
+            formMessage.style.color = '#2e7d32';
+            newsletterForm.reset();
+            setTimeout(() => { formMessage.textContent = ''; }, 4000);
+        });
+    </script>
+
+</body>
+</html>
